@@ -1,0 +1,176 @@
+/* ─── Reset ────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  color: #201f1e;
+  background: #f3f2f1;
+  min-height: 100vh;
+}
+
+/* ─── Header ───────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: #0078d4;
+  color: #fff;
+}
+
+.header-icon {
+  font-size: 22px;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.header-title {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.header-sub {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+/* ─── Main content ─────────────────────────────────────────────── */
+.content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ─── Card ─────────────────────────────────────────────────────── */
+.card {
+  background: #ffffff;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ─── Fields ───────────────────────────────────────────────────── */
+.field-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #605e5c;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.text-input,
+.select-input {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #8a8886;
+  border-radius: 2px;
+  font-size: 13px;
+  font-family: inherit;
+  color: #201f1e;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.text-input {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.text-input:focus,
+.select-input:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 0 1px #0078d4;
+}
+
+/* ─── Button ───────────────────────────────────────────────────── */
+.btn-primary {
+  margin-top: 6px;
+  width: 100%;
+  padding: 9px 14px;
+  background: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #106ebe;
+}
+
+.btn-primary:active:not(:disabled) {
+  background: #005a9e;
+}
+
+.btn-primary:disabled {
+  background: #c8c6c4;
+  cursor: not-allowed;
+}
+
+/* ─── Status ───────────────────────────────────────────────────── */
+.status {
+  padding: 9px 12px;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-left: 3px solid transparent;
+}
+
+.status.hidden {
+  display: none;
+}
+
+.status.info {
+  background: #def0fd;
+  border-color: #0078d4;
+  color: #004e8c;
+}
+
+.status.success {
+  background: #dff6dd;
+  border-color: #107c10;
+  color: #0b6a0b;
+}
+
+.status.error {
+  background: #fde7e9;
+  border-color: #c50f1f;
+  color: #a4262c;
+}
+
+/* ─── Info card ────────────────────────────────────────────────── */
+.info-card {
+  background: #faf9f8;
+}
+
+.info-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #605e5c;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 4px;
+}
+
+.info-list {
+  padding-left: 16px;
+  color: #605e5c;
+  line-height: 1.9;
+  font-size: 12px;
+}
