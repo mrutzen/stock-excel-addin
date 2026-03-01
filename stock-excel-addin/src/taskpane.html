@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stock Data Puller</title>
+    <link rel="stylesheet" href="taskpane.css" />
+    <!-- Office.js must load before taskpane.js -->
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  </head>
+
+  <body>
+    <!-- ── Header ─────────────────────────────────────────────── -->
+    <header class="header">
+      <div class="header-icon">&#9650;</div>
+      <div>
+        <div class="header-title">Stock Data Puller</div>
+        <div class="header-sub">Powered by Yahoo Finance</div>
+      </div>
+    </header>
+
+    <!-- ── Main content ──────────────────────────────────────── -->
+    <main class="content">
+
+      <!-- Ticker input -->
+      <section class="card">
+        <label for="ticker-input" class="field-label">Ticker Symbol</label>
+        <input
+          type="text"
+          id="ticker-input"
+          class="text-input"
+          placeholder="e.g. AAPL, MSFT, TSLA"
+          maxlength="10"
+          autocomplete="off"
+          spellcheck="false"
+        />
+
+        <label for="range-select" class="field-label" style="margin-top:12px">
+          Historical Range
+        </label>
+        <select id="range-select" class="select-input">
+          <option value="1mo">1 Month</option>
+          <option value="3mo">3 Months</option>
+          <option value="6mo">6 Months</option>
+          <option value="1y" selected>1 Year</option>
+          <option value="2y">2 Years</option>
+          <option value="5y">5 Years</option>
+        </select>
+
+        <button id="pull-btn" class="btn-primary">
+          &#8659;&nbsp; Pull Stock Data
+        </button>
+      </section>
+
+      <!-- Status banner -->
+      <div id="status" class="status hidden"></div>
+
+      <!-- What's pulled info -->
+      <section class="card info-card">
+        <div class="info-title">Data pulled into sheet</div>
+        <ul class="info-list">
+          <li>Current price, change &amp; volume</li>
+          <li>Market cap, P/E, EPS, beta</li>
+          <li>52-week high &amp; low</li>
+          <li>Dividend yield &amp; rate</li>
+          <li>Revenue, profit margin, ROE</li>
+          <li>Historical OHLCV (selected range)</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <script src="taskpane.js"></script>
+  </body>
+</html>
